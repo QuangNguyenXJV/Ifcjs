@@ -1,5 +1,5 @@
-import { AmbientLight, AxesHelper, DirectionalLight, GridHelper, PerspectiveCamera, Scene, WebGLRenderer } from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import { AmbientLight, AxesHelper, DirectionalLight, GridHelper, PerspectiveCamera, Scene, WebGLRenderer } from "D:/R&D/ifcjs/node_modules/three";
+import { OrbitControls } from "D:/R&D/ifcjs/node_modules/three/examples/jsm/controls/OrbitControls.js";
 
 //Creates the Three.js scene
 const scene = new Scene();
@@ -71,11 +71,10 @@ window.addEventListener("resize", () => {
   renderer.setSize(size.width, size.height);
 });
 
-import { IFCLoader } from "web-ifc-three/IFCLoader";
+import { IFCLoader } from "D:/R&D/ifcjs/node_modules/web-ifc-three/IFCLoader.js";
 
 // Sets up the IFC loading
 const ifcLoader = new IFCLoader();
-ifcLoader.ifcManager.setWasmPath("node_modules/web-ifc/");
 const input = document.getElementById("file-input");
 input.addEventListener(
   "change",
